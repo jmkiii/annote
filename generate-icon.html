@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="c48" width="48" height="48"></canvas>
+<canvas id="c96" width="96" height="96"></canvas>
+<a id="dl48" download="icon48.png">Download icon48.png</a><br><br>
+<a id="dl96" download="icon96.png">Download icon96.png</a>
+<script>
+  function drawIcon(canvas) {
+    const c = canvas.getContext('2d');
+    const s = canvas.width;
+    const cx = s * 0.42, cy = s * 0.42, r = s * 0.28, sw = s * 0.1;
+
+    // Background
+    c.fillStyle = '#1a1a2e';
+    c.beginPath();
+    c.roundRect(0, 0, s, s, s * 0.18);
+    c.fill();
+
+    // Circle of magnifying glass
+    c.strokeStyle = '#e94560';
+    c.lineWidth = sw;
+    c.beginPath();
+    c.arc(cx, cy, r, 0, Math.PI * 2);
+    c.stroke();
+
+    // Handle
+    c.lineCap = 'round';
+    c.beginPath();
+    c.moveTo(cx + r * 0.72, cy + r * 0.72);
+    c.lineTo(s * 0.88, s * 0.88);
+    c.stroke();
+  }
+
+  const c48 = document.getElementById('c48');
+  const c96 = document.getElementById('c96');
+  drawIcon(c48);
+  drawIcon(c96);
+
+  document.getElementById('dl48').href = c48.toDataURL('image/png');
+  document.getElementById('dl96').href = c96.toDataURL('image/png');
+</script>
+</body>
+</html>
