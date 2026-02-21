@@ -1,8 +1,8 @@
-# The Lens — Annote
+# Annote
 
 > A democratic annotation layer for the web
 
-**The Lens** is a browser extension that lets you highlight text, drop pin annotations, and leave notes on any webpage — all stored locally in your browser. No account required, no data leaves your machine.
+**Annote** is a browser extension that lets you highlight text, drop pin annotations, and leave notes on any webpage — all stored locally in your browser. No account required, no data leaves your machine.
 
 ---
 
@@ -25,15 +25,15 @@
 
 ```
 annote/
-├── manifest.json        # Extension manifest (v2), permissions, icons
-├── background.js        # Service worker: creates right-click context menu, routes messages
-├── content.js           # Core logic: annotation modal, rendering, anchoring, cards, replies
-├── content.css          # Styles for highlights, pins, cards, sidebar, modal
-├── popup.html           # Toolbar popup UI (stats, actions, annotation list)
-├── popup.js             # Popup logic: load stats, scroll-to, export, clear
-├── icon48.png           # Extension icon (48px)
-├── icon96.png           # Extension icon (96px)
-└── generate-icon.html   # Dev tool to generate icons in-browser
+├── manifest.json      # Extension manifest (v2), permissions, icons
+├── background.js      # Service worker: creates right-click context menu, routes messages
+├── content.js         # Core logic: annotation modal, rendering, anchoring, cards, replies
+├── content.css        # Styles for highlights, pins, cards, sidebar, modal
+├── popup.html         # Toolbar popup UI (stats, actions, annotation list)
+├── popup.js           # Popup logic: load stats, scroll-to, export, clear
+├── icon48.png         # Extension icon (48px)
+├── icon96.png         # Extension icon (96px)
+└── generate-icon.html # Dev tool to generate icons in-browser
 ```
 
 ---
@@ -58,7 +58,7 @@ annote/
 | Action | How |
 |---|---|
 | Annotate selected text | Select text on any page → click the **✏️ Annotate** toolbar that appears |
-| Drop a pin | Right-click anywhere → **🔍 Add Lens Annotation Here** |
+| Drop a pin | Right-click anywhere → **🔍 Add Annote Annotation Here** |
 | View an annotation | Hover over a highlight or pin → click the **🔍** trigger icon |
 | Edit / delete | Open the annotation card → use **✏️ Edit** or **🗑️** |
 | See all annotations on page | Click the extension icon in the toolbar |
@@ -69,7 +69,7 @@ annote/
 
 ## Anchor Resolution (How It Stays Accurate)
 
-When a page changes, The Lens tries five strategies in order to find where an annotation belongs:
+When a page changes, Annote tries five strategies in order to find where an annotation belongs:
 
 1. **Exact match** — finds the verbatim text, scored by surrounding prefix/suffix context
 2. **Fuzzy match** — sliding-window Levenshtein similarity (threshold: 72%)
