@@ -575,7 +575,7 @@ function renderTextAnnotation(annotation) {
 
     return true;
   } catch (e) {
-    console.warn('The Lens: anchor failed', confidence, e);
+    console.warn('Annote: anchor failed', confidence, e);
     return false;
   }
 }
