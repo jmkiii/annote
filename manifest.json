@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "The Lens",
+  "name": "Annote",
   "version": "0.1.0",
   "description": "A democratic annotation layer for the web",
   "permissions": [
@@ -27,7 +27,7 @@
   ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "The Lens",
+    "default_title": "Annote",
     "default_icon": {
       "48": "icon48.png",
       "96": "icon96.png"
