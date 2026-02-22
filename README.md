@@ -2,7 +2,7 @@
 
 > A democratic annotation layer for the web
 
-**Annote** is a browser extension that lets you highlight text, drop pin annotations, and leave notes on any webpage — all stored locally in your browser. No account required, no data leaves your machine.
+**Annote** is a browser extension that lets you highlight text, drop pin annotations, and leave notes on any webpage — all stored locally in your browser. No account required, no data leaves your machine... yet.
 
 ---
 
