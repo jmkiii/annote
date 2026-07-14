@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Annote",
+  "version": "0.1.0",
+  "description": "P2P annotation and drawing layer over the web. Never talks to the sites you visit.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "shared.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Annote wallet"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "annote@trey.dev",
+      "strict_min_version": "115.0"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

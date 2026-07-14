@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: system-ui, sans-serif; width: 300px; margin: 0; padding: 14px; background:#16161a; color:#eee; }
+  h1 { font-size: 15px; margin: 0 0 10px; }
+  .bal { font-size: 26px; font-weight: 700; color:#ffd54a; }
+  .unit { font-size: 13px; color:#aaa; }
+  .pk { font-size: 10px; color:#888; word-break: break-all; margin: 6px 0 12px; }
+  label { display:block; font-size: 11px; color:#aaa; margin-top: 10px; }
+  input, textarea { width: 100%; box-sizing: border-box; background:#26262c; color:#eee; border:1px solid #3a3a44;
+    border-radius: 8px; padding: 6px; font-size: 12px; margin-top: 3px; }
+  button { margin-top: 8px; background:#ffd54a; color:#111; border:none; border-radius: 8px; padding: 6px 12px;
+    font-weight: 600; cursor: pointer; }
+  button.sec { background:#3a3a44; color:#eee; }
+  .row { display:flex; gap:6px; }
+  .status { font-size: 11px; color:#7c7; margin-top: 8px; min-height: 14px; }
+</style>
+</head>
+<body>
+  <h1>Annote</h1>
+  <div><span class="bal" id="bal">…</span> <span class="unit">NOTE</span></div>
+  <div class="pk" id="stakeinfo" style="color:#c9a13b;"></div>
+  <div class="pk" id="pk"></div>
+
+  <label>Stake NOTE — boosts your mint weight (7-day unlock)</label>
+  <div class="row"><input id="stakeAmt" type="number" step="0.1" placeholder="amount"><button id="stakeBtn">Stake</button><button id="unstakeBtn" class="sec">Unstake</button></div>
+
+  <label>Display name</label>
+  <div class="row"><input id="name"><button id="saveName">Set</button></div>
+
+  <label>Send NOTE — recipient pubkey</label>
+  <input id="to" placeholder="04ab…">
+  <div class="row"><input id="amount" type="number" step="0.1" placeholder="amount"><button id="send">Send</button></div>
+
+  <label>Relays (one per line)</label>
+  <textarea id="relays" rows="3"></textarea>
+  <button id="saveRelays" class="sec">Save relays</button>
+  <button id="backup" class="sec">Backup key</button>
+  <button id="exportBtn" class="sec">Export annotations (JSON)</button>
+  <button id="clearBtn" class="sec">Clear local cache (refetch from relays)</button>
+
+  <div class="status" id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

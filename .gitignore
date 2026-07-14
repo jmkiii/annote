@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Relay runtime data (generated at runtime, not source)
+relay/events-*.json
+*.log
+
+# Local-only docs, context & helper scripts (kept off the public repo)
+docs/_private/
+CLAUDE.md
+setup-git.ps1
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
